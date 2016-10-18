@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <title>Angular Application</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+    <style>
+    .counter {
+        background: #F6F6F6;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    
+    .counter button {
+        background: #338dbc;
+        border: 0;
+        border-radius: 3px;
+        color: #FFFFFF;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <mg-counter></mg-counter>
+        <mg-counter></mg-counter>
+    </div>
+    <hr>
+    <div class="counter" ng-controller="CountController as counter">
+        <input type="text" ng-model="counter.count" />
+        <button type="button" ng-click="counter.decrement()">-</button>
+        <button type="button" ng-click="counter.increment()">+</button>
+    </div>
+    <script src="./js/app.js"></script>
+    <script src="./js/CountController.js"></script>
+    <script src="./js/mgStretch.derective.js"></script>
+</body>
+
+</html>
